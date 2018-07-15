@@ -40,7 +40,7 @@ a {
 
 .link-light {
 	color: #ffffff;
-	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+	
 
 	font-weight: 400;
 }
@@ -48,18 +48,18 @@ a {
 .link-light:hover,
 .link-light:active {
 	color: #ffbc9e;
-	border-bottom: 1px solid rgba(255, 188, 158, 0.2); 
+	
 }
 
 .link-dark {
 	color: #323232;
-	border-bottom: 1px solid #323232;
+	
 }
 
 .link-dark:hover,
 .link-dark:active {
 	color: #e84d37;
-	border-bottom: 1px solid #e84d37;
+	
 }
 
 .button {
@@ -127,9 +127,6 @@ a {
 	padding: 8px 13px;
 	font-weight: 700;
 	border: none;
-	text-decoration: underline;
-	text-decoration-color: rgba(255, 255, 255, .7);
-	text-decoration-style: solid;
 }
 
 .main-menu-link:hover {
@@ -497,6 +494,7 @@ a {
 	display: flex;
 	flex-wrap: wrap;
 	margin: 0;
+	margin-bottom: 40px;
 	padding: 0;
 
 	list-style: none;
@@ -507,9 +505,11 @@ a {
 	flex-direction: column;
 	position: relative;
 	width: 267px;
+	height: 405px;
 	padding: 0;
 	margin: 0;
 	margin-right: 26px;
+	margin-top: -30px;
 }
 
 .catalog-item:hover {
@@ -524,9 +524,8 @@ a {
 .catalog-item:hover::before {
 	content: "";
     position: absolute;
-    display: block;
     width: 104%;
-    height: 101%;
+    height: 380px;
     margin-top: -3%;
     margin-left: -2%;
     padding-bottom: 60px;
@@ -539,6 +538,16 @@ a {
 	order: 3;
 	font-weight: 500;
 	text-align: center; 
+	border-bottom: none;
+}
+
+.catalog-link__underline {
+	border-bottom: 1px solid rgba(255, 255, 255, .2);
+}
+
+.catalog-link__underline:hover {
+	color: #e84d37;
+	border-bottom: 1px solid #e84d37;
 }
 
 .catalog-price {
@@ -828,6 +837,7 @@ a {
 }
 
 .footer-link {
+	padding-left: 25px;
 	text-align: center;
 }
 
@@ -846,18 +856,38 @@ a {
 	text-align: left;
 }
 
-.footer-link a {
+.footer-link__item {
+	position: relative;
 	font-size: 13px;
 	line-height: 18px;
+	border: none;
+}
+
+.footer-link__item--heart::before {
+	content: "";
+
+	position: absolute;
+	left: -29px;
+	top: 5px;
+
+	width: 15px;
+	height: 13px;
+
+	background-image: url(../img/heart.svg);
 }
 
 .footer-copyright {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
 	width: 200px;
+	margin: 0;
 	margin-left: auto;
 
 	text-align: right;
 	font-size: 12px;
 	line-height: 18px;
+	text-align: left;
 }
 
 /* Стилизация страницы каталога */
@@ -869,6 +899,10 @@ a {
 	font-size: 35px;
 	line-height: 41px;
 	font-weight: 700;
+}
+
+.main {
+	border-bottom: 1px solid rgba(225, 255, 255, 0.2);
 }
 
 .breadcrumbs {
@@ -895,6 +929,10 @@ a {
 
 .breadcrumb-current {
 	align-self: center;
+}
+
+.filters {
+	margin-bottom: 40px;
 }
 
 .filter {
@@ -1193,12 +1231,49 @@ input[type=range]:focus::-ms-fill-upper {
 /* Пагинация */
 
 .pagination-list {
+	display: flex;
+	position: relative;
+
+	width: 192px;
+
+	margin: 0;
+	margin-left: auto;
+	padding: 0;
+	padding-left: 23px; 
+
 	list-style: none;
 }
 
+.pagination-list::before,
+.pagination-list::after {
+	content: "";
+	position: absolute;
+	width: 6px;
+	height: 6px;
+	border-top: 1px solid rgba(255, 255, 255, 1);
+	border-right: 1px solid rgba(255, 255, 255, 1);
+}
+
+.pagination-list::before {
+	left: 0px;
+	top: 8px;
+	border-top: 1px solid rgba(255, 255, 255, .2);
+	border-right: 1px solid rgba(255, 255, 255, .3);
+	transform: rotate(-135deg);
+}
+
+.pagination-list::after {
+	left: 170px;
+	top: 8px;
+	transform: rotate(45deg);
+}
+
 .pagination-list a {
+	padding: 8px 9px;
+
 	color: #ffffff;
 	background-color: transparent;
+	border-radius: 50%;
 }
 
 .pagination-list a:hover {
@@ -1214,6 +1289,8 @@ input[type=range]:focus::-ms-fill-upper {
 /* Модальные окна */
 
 .modal {
+	display: none;
+
 	color: #323232;
 
 	/* background-color: #f8f7f4; */
