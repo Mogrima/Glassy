@@ -190,15 +190,16 @@ a {
 .header-buttons {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	/* justify-content: space-between; */
 	align-items: center;
-	width: 320px;
+	width: 262px;
 	margin-left: auto;
 }
 
 .user-navigation {
 	margin: 0;
-	/* margin-right: 51px; */
+	margin-left: 56px;
+	margin-right: 12px;
 	padding: 0;
 
 	list-style: none;
@@ -256,6 +257,8 @@ a {
 .search-button::before {
 	content: "";
 	position: absolute;
+	top: -16px;
+	left: 0;
 
 	width: 33px;
 	height: 33px;
@@ -1290,11 +1293,24 @@ input[type=range]:focus::-ms-fill-upper {
 
 .modal {
 	display: none;
+	position: absolute;
 
 	color: #323232;
 
 	/* background-color: #f8f7f4; */
 	border-radius: 10px;
+}
+
+.overlay {
+	display: none;
+
+  	position: fixed;
+  	top: 0;
+  	left: 0;
+  	z-index: 1;
+
+  	height: 100%;
+  	width: 100%;	
 }
 
 .modal input[type="email"],
@@ -1307,7 +1323,9 @@ input[type=range]:focus::-ms-fill-upper {
 }
 /* Личный кабинет */
 .modal-login {
-	display: none;
+	z-index: 10;
+	top: 55px;
+	left: 61%;
 	padding-top: 20px;
 	width: 277px;
 	min-height: 214px;
@@ -1369,7 +1387,10 @@ input[type=range]:focus::-ms-fill-upper {
 /* Поиск */
 
 .modal-search {
-	display: none;
+	position: absolute;
+	z-index: 10;
+	left: 51%;
+	top: 55px;
 	padding: 20px 15px;
 	box-sizing: border-box;
 	width: 341px;
@@ -1465,6 +1486,10 @@ input[type=range]:focus::-ms-fill-upper {
 	font-size: 15px;
 	line-height: 18px;
 	font-weight: 700;
+}
+
+.modal-show {
+	display: block;
 }
 
 
