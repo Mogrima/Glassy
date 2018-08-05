@@ -309,7 +309,7 @@
 			</p>
 			<p>
 				<label class="visually-hidden" for="user-password">Пароль</label>
-				<input class="login-icon-password" id="user-password" type="password" name="email" placeholder="Пароль">
+				<input class="login-icon-password" id="user-password" type="password" name="password" placeholder="Пароль">
 			</p>
 				<button class="button login-button" type="submit">Войти</button>
 			<div class="login-password-info">
@@ -318,7 +318,8 @@
 			</div>
 			
 		</form>
-		<button class="visually-hidden" type="button">Закрыть</button>
+		<button class="modal-close visually-hidden" type="button">Закрыть</button>
+
 	</section>
 <section class="modal modal-search">
 		<h2 class="visually-hidden">Поиск</h2>
@@ -326,6 +327,8 @@
 			<label class="visually-hidden" for="user-search">Форма поиска</label>
 			<input class="main-search-input" id="user-search" type="search" name="search" placeholder="Что ищем?">
 		</form>
+		<button class="modal-close search-close visually-hidden" type="button">Закрыть</button>
+
 	</section>
 
 	<section class="modal modal-feadback">
@@ -348,6 +351,8 @@
 		</form>
 			<button class="modal-close visually-hidden" type="button">Закрыть</button>
 	</section>
-	
+	<div class="overlay"></div>
+
+<script type="text/javascript" src="js/modal.js"></script>	
 </body>
 </html>
