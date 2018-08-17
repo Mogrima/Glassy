@@ -13,7 +13,7 @@ body {
 	font-weight: 400;
 	color: #ffffff;
 
-	background-color: #849d8f;
+	
 }
 
 a {
@@ -434,105 +434,152 @@ a {
 /* Слайдер */
 
 .promotion {
-	margin-bottom: 536px;
-}
-
-.promotion-slider {
 	position: relative;
+
+}
+
+.slider {
+	margin: 0;
+	padding: 0;
 	list-style: none;
+
+	position: relative;
+    margin-bottom: 40px;
+    padding-top: 200px;
+    overflow: hidden
 }
 
-.promotion-slider-item {
-	/* min-height: 600px; */
-	text-align: center;
+.slider-item {
+	position: relative;
+	z-index: 10;
+
+	 width: 690px;
+    margin: 73px auto 0;
+    text-align: center;
 }
 
-.promotion-slider-item p {
-	font-size: 60px;
-	font-weight: 700;
-	line-height: 60px;
+.slider__title {
+    margin-bottom: 28px;
+    color: #fff;
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: 700
 }
 
-.promotion-slide1 {
-	position: absolute;
-	z-index: -1;
-	top: -670px;
-	left: 0px;
-	width: 1100px;
-	min-height: 900px;
-	background-image: url(../img/icecream.png);
-	background-size: cover;
-	background-position: center center;
-	background-repeat: no-repeat;
+.slider__btn {
+    display: block;
+    height: 63px;
+    width: 280px;
+    margin: 0 auto 3px;
+    padding: 0;
+
+    font-family: Roboto,Arial,Helvetica,sans-serif;
+    font-size: 32px;
+    line-height: 63px;
+    font-weight: 700;
+    color: inherit;
+    text-decoration: none;
+
+    background-color: #f26843;
+    background-image: -webkit-linear-gradient(#f26843,#e74a35);
+    background-image: linear-gradient(#f26843,#e74a35);
+    
+    box-shadow: 0 2px 2px 0 rgba(172,16,0,.64);
+	border-radius: 100px;
+
+	text-shadow: 0 2px 5px rgba(160,32,11,.76), 0 0 5px rgba(61,61,46,.34);
 }
 
-.promotion-slide1 p {
-	position: absolute;
-	right: 200px;
-	bottom: 370px;
-	/* padding: 0 20px; */
-	margin: 0;
-	width: 700px;
+.slider__btn:hover,
+.slider__btn:active {
+	background: #f26843
 }
 
-.promotion-slide2 {
+.slider__btn:hover {
+    background-image: -webkit-linear-gradient(#f58669,#ec6f5e);
+    background-image: linear-gradient(#f58669,#ec6f5e);
+    box-shadow: 0 2px 2px 0 #ac1000
+}
+
+.slider__btn:active {
+    background-image: -webkit-linear-gradient(#d84732,#e1603e);
+    background-image: linear-gradient(#d84732,#e1603e);
+    box-shadow: inset 0 2px 2px 0 #942718
+}
+
+.item-slider--1,
+.item-slider--2,
+.item-slider--3 {
 	display: none;
-	position: absolute;
-	z-index: -2;
-	top: -670px;
-	left: 0px;
-	width: 1100px;
-	min-height: 900px;
-	background-image: url(../img/icecream-2.png);
-	background-position: 0 0;
-	background-repeat: no-repeat;
 }
 
-.promotion-slide2 p {
+.slider__controls {
 	position: absolute;
-	right: 200px;
-	bottom: 370px;
-	/* padding: 0 20px; */
-	margin: 0;
-	width: 700px;
+    bottom: 21px;
+    display: block;
+    width: 100px
 }
 
-.promotion-slide3 {
+.toggle {
 	display: none;
-	position: absolute;
-	z-index: -3;
-	top: -670px;
-	left: 0px;
-	width: 1100px;
-	min-height: 900px;
-	background-image: url(../img/icecream-3.png);
-	background-position: 0 0;
-	background-repeat: no-repeat;
+	position: relative;
+	z-index: 1;
 }
 
-.promotion-slide3 p {
+.index-bg {
 	position: absolute;
-	right: 200px;
-	bottom: 370px;
-	/* padding: 0 20px; */
-	margin: 0;
-	width: 700px;
+
+	background-color: #849d8f;
+	min-width: 100%;
+	margin-top: -14px;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    -webkit-transition: all .3s ease-out;
+    transition: all .3s ease-out
+}
+.toggle-name {
+	position: relative;
+	z-index: 1;
+	 display: inline-block;
+    vertical-align: top;
+    width: 17px;
+    height: 17px;
+    margin-right: 4px;
+    cursor: pointer;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    font-size: 0
 }
 
-.promotion-button {
-	position: absolute;
-	right: 400px;
-	bottom: 270px;
-	padding: 13px 40px;
-	font-size: 	32px;
-	font-weight: 700;
-	line-height: 44px;
+.toggle-name:hover {
+	background-color: rgba(248,247,244,.4);
 }
 
-/* Навигация слайдера */
+.toggle--1:checked~.index-bg .toggle-name--1,
+.toggle--2:checked~.index-bg .toggle-name--2,
+.toggle--3:checked~.index-bg .toggle-name--3 {
+    background-color: #fff
+}
 
-.slides-button {
-	list-style: none;
+.toggle--1:checked~.index-bg {
+    background-color: #849d8f;
+    background-image: url(../img/icecream.png);
+}
+
+.toggle--2:checked~.index-bg {
+    background-color: #8996a6;
+    background-image: url(../img/icecream-2.png);
+}
+
+.toggle--3:checked~.index-bg {
+    background-color: #a7958e;
+    background-image: url(../img/icecream-3.png);
+}
+
+.toggle--1:checked~.index-bg .item-slider--1,
+.toggle--2:checked~.index-bg .item-slider--2,
+.toggle--3:checked~.index-bg .item-slider--3 {
+    display: block
 }
 
 /* Акции */

@@ -20,6 +20,13 @@
           <path fill="currentColor" class="path1 fill-color3" d="M919.39 1023.245h-596.022c-89.304 0-161.684-72.435-161.684-161.738v-53.086h107.789v107.789h700.632v-808.421h-700.632v106.119h-107.789v-51.739c0-89.304 72.381-161.684 161.684-161.684h596.022c89.304 0 161.684 72.381 161.684 161.684v699.338c0 89.304-72.381 161.738-161.684 161.738zM324.662 224.094l378.718 285.642-378.718 285.642v-147.833h-324.931v-275.618h324.931v-147.833z"></path>
         </symbol>
       </defs>
+  </svg>
+     <input class="toggle toggle--1" type="radio" checked="checked" name="chetyre"/ id="toggle-slide-1">
+	<input class="toggle toggle--2" type="radio" name="chetyre" id="toggle-slide-2"/>
+	<input class="toggle toggle--3" type="radio" name="chetyre" id="toggle-slide-3"/>
+
+	<div class="index-bg">
+
 	<header class="main-header">
 		<div class="container">
 			<nav class="main-navigation">
@@ -76,43 +83,33 @@
 		
 		<h1 class="visually-hidden">Глейси - Магазин по продаже мороженого</h1>
 		
-		<section class="promotion">
+	<div class="slider-wrapper">
+			<section class="promotion">
 			<h2 class="visually-hidden">Предложения</h2>
-			<ul class="promotion-slider">
-				<li class="promotion-slider-item">
-					<div class="promotion-slide1">
-						<p>Крем-брюле и пломбир с малиновым джемом</p>
-						<a class="button promotion-button" href="#">Давайте оба!</a>
-					</div>
-					
+			<ul class="slider">
+				<li class="slider-item item-slider--1">
+					<h3 class="slider__title">Крем-брюле и пломбир с малиновым джемом</h3>
+					<a href="#" class="slider__btn">Давайте оба!</a>
 				</li>
-		<li class="promotion-slider-item">
-			<div class="promotion-slide2">
-				<p>Шоколадный пломбир и лимонный сорбет </p>
-				<a class="button promotion-button" href="#">Давайте оба!</a>
-			</div>
-			
-		</li>
-		<li class="promotion-slider-item">
-			<div class="promotion-slide3">
-				<p>Пломбир с помадкой и клубничный щербет</p>
-				<a class="button promotion-button" href="#">Давайте оба!</a>
-			</div>
-			
-		</li>
-			</ul>
-			<ul class="slides-button">
-				<li class="slide-radio">
-					<button class="visually-hidden slide-btn">Первый слайд</button>
+				<li class="slider-item item-slider--2">
+					<h3 class="slider__title">Шоколадный пломбир и лимонный сорбет</h3>
+					<a  href="#" class="slider__btn">Давайте оба!</a>
 				</li>
-				<li class="slide-radio">
-					<button class="visually-hidden slide-btn">Второй слайд</button>
-				</li>
-				<li class="slide-radio">
-					<button class="visually-hidden slide-btn">Третий слайд</button>
+				<li class="slider-item item-slider--3">
+					<h3 class="slider__title">Пломбир с помадкой и клубничный щербет</h3>
+					<a  href="#" class="slider__btn">Давайте оба!</a>
 				</li>
 			</ul>
+		
+		
+		
+			<div class="slider__controls">
+				<label for="toggle-slide-1" class="toggle-name toggle-name--1"></label>
+				<label for="toggle-slide-2" class="toggle-name toggle-name--2"></label>
+				<label for="toggle-slide-3" class="toggle-name toggle-name--3"></label>
+			</div>
 		</section>
+	</div>
 
 		<section class="benefit">
 			<h2 class="visually-hidden">Акции</h2>
@@ -318,7 +315,7 @@
 			</p>
 		</div>
 	</footer>
-
+</div>
 	<!-- Модальные окна -->
 	<section class="modal modal-login">
 		<h2 class="visually-hidden">Личный кабинет</h2>
