@@ -1651,19 +1651,30 @@ input[type=range]:focus::-ms-fill-upper {
 
 /* Обратная связь */
 .modal-feadback {
-	display: none;
-	padding: 18px 25px 27px 25px;
+	position: fixed;
+	top: 40%;
+	left: 50%;
+	z-index: 100;
+	display: block;
+	padding: 16px 25px 27px 25px;
 	box-sizing: border-box;
-	width: 476px;
+	width: 477px;
 	height: 442px;
+	margin-left: -238px;
 	background-color: #f8f7f4;
 }
 
 .modal-feadback h3 {
 	margin: 0;
+	margin-bottom: 20px;
 	font-size: 24px;
 	font-weight: 500;
 	line-height: 28px;
+}
+
+.modal-feadback p {
+	margin: 0;
+	margin-bottom: 21px;
 }
 
 .feedback-form input {
@@ -1671,6 +1682,17 @@ input[type=range]:focus::-ms-fill-upper {
 	width: 267px;
 	height: 44px;
 	padding: 10px 15px;
+	padding-left: 13px;
+}
+
+.feedback-form textarea {
+	padding: 4px 15px 10px 13px;
+}
+
+.feedback-form input::placeholder,
+.feedback-form textarea::placeholder {
+	font-size: 16px;
+	color: #999999;
 }
 
 .feedback-form input,
@@ -1684,7 +1706,7 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 .feedback-form-input-text {
-	margin-bottom: 25px;
+	margin-bottom: 17px;
 	padding: 10px 15px;
 	box-sizing: border-box;
 	width: 428px;
@@ -1698,6 +1720,37 @@ input[type=range]:focus::-ms-fill-upper {
 	box-sizing: border-box;
 	width: 138px;
 	text-align: right;
+}
+
+.modal-close {
+	font-size: 0;
+
+	background-color: transparent;
+	border: none;
+
+	cursor: pointer;
+}
+
+.modal-close::before,
+.modal-close::after {
+	content: "";
+
+	position: absolute;
+	top: 14px;
+	right: 23px;
+
+	width: 2px;
+	height: 19px;
+
+	background-color: #231f20;
+}
+
+.modal-close::before {
+	transform: rotate(45deg);
+}
+
+.modal-close::after {
+	transform: rotate(-45deg);
 }
 
 /* Корзина */
