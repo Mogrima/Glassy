@@ -1,28 +1,13 @@
-/*	Объявляю необходимые переменные для личного кабинета*/
+var loginLink = document.querySelector(".login-link");
+var modalLogin = document.querySelector(".modal-login");
+var overClose = document.querySelector(".overlay");
+var login = modalLogin.querySelector("[name=email]");
+var password = modalLogin.querySelector("[name=password]");
+var storage = localStorage.getItem("login");
 
-	var link = document.querySelector(".login-link");
-	var popup = document.querySelector(".modal-login");
-	/*var close = document.querySelector(".modal-close");*/
-	var overClose = document.querySelector(".overlay");
-	var form = popup.querySelector(".login-form");
-	var login = popup.querySelector("[name=email]");
-	var password = popup.querySelector("[name=password]");
-	var storage = localStorage.getItem("login");
-
-	var search = document.querySelector(".search-button");
-	var searchForm = document.querySelector(".modal-search");
-	var searchInput = document.querySelector(".main-search-input");
-	var searchClose = document.querySelector(".search-close");
-
-	var feedback = document.querySelector(".feedback-button");
-	var feedbackModal = document.querySelector(".feedback-wrapp");
-	var feedbackClose = document.querySelector(".modal-close");
-
-/*Функции для всплывания окна с личным кабинетом, его закрытия*/
-
-	link.addEventListener("click", function(evt) {
+loginLink.addEventListener("click", function(evt) {
 		evt.preventDefault();
-		popup.classList.add("modal-show");
+		modalLogin.classList.add("modal-show");
 		overClose.classList.add("modal-show");
 		if (storage) {
 			login.value = storage;
@@ -32,80 +17,77 @@
 		}
 	});
 
-	/*close.addEventListener("click", function(evt) {
+overClose.addEventListener("click", function(evt) {
 		evt.preventDefault();
-		popup.classList.remove("modal-show");
+		modalLogin.classList.remove("modal-show");
+		modalSearch.classList.remove("modal-show");
+		modalFeedback.classList.remove("modal-show");
 		overClose.classList.remove("modal-show");
-		popup.classList.remove("modal-error");
-	});*/
-
-	overClose.addEventListener("click", function(evt) {
-		evt.preventDefault();
-		popup.classList.remove("modal-show");
-		overClose.classList.remove("modal-show");
-		popup.classList.remove("modal-error");
-		searchForm.classList.remove("modal-show");
+		modalLogin.classList.remove("modal-error");
 	});
 
-	form.addEventListener("submit", function(evt) {
-		if (!login.value || !password.value) {
-			evt.preventDefault();
-			popup.classList.add("modal-error");
-		} else {
-			/*if (isStorageSupport) {
-				localStorage.setItem("login", login.value);
-			}*/
-			localStorage.setItem("login", login.value);
-		}
-		
-	});
-
-	window.addEventListener("keydown", function(evt) {
+window.addEventListener("keydown", function(evt) {
 		if (evt.keyCode === 27) {
 			evt.preventDefault();
 
-			if (popup.classList.contains("modal-show")) {
-				popup.classList.remove("modal-show");
+			if (modalLogin.classList.contains("modal-show")) {
+				modalLogin.classList.remove("modal-show");
 				overClose.classList.remove("modal-show");
-				searchForm.classList.remove("modal-show");
-				popup.classList.remove("modal-error");
+				modalLogin.classList.remove("modal-error");
 				
 			}
 		}
 	});
 
-	search.addEventListener("click", function(evt) {
+var searchLink = document.querySelector(".search-button");
+var modalSearch = document.querySelector(".modal-search");
+var searchInput = document.querySelector(".main-search-input");
+
+searchLink.addEventListener("click", function(evt) {
 		evt.preventDefault();
-		searchForm.classList.add("modal-show");
+		modalSearch.classList.add("modal-show");
 		overClose.classList.add("modal-show");
 		searchInput.focus();
 	});
 
-	searchClose.addEventListener("click", function(evt) {
-		evt.preventDefault();
-		searchForm.classList.remove("modal-show");
-		overClose.classList.remove("modal-show");
-	});
-
-	window.addEventListener("keydown", function(evt) {
+window.addEventListener("keydown", function(evt) {
 		if (evt.keyCode === 27) {
 			evt.preventDefault();
 
-			if (searchForm.classList.contains("modal-show")) {
-				searchForm.classList.remove("modal-show");
+			if (modalSearch.classList.contains("modal-show")) {
+				modalSearch.classList.remove("modal-show");
 				overClose.classList.remove("modal-show");
 				
 			}
 		}
 	});
 
-	feedback.addEventListener("click", function(evt) {
+var feedbackLink = document.querySelector(".feedback-button");
+var modalFeedback = document.querySelector(".feedback-wrapp");
+var feedbackClose = document.querySelector(".modal-close");
+var feedbackInput = document.querySelector(".feedback-form-input-name");
+
+
+feedbackLink.addEventListener("click", function(evt) {
 		evt.preventDefault();
-		feedbackModal.classList.add("modal-show");
+		modalFeedback.classList.add("modal-show");
+		overClose.classList.add("modal-show");
+		feedbackInput.focus();
 	});
 
-	feedbackClose.addEventListener("click", function(evt) {
+feedbackClose.addEventListener("click", function(evt) {
 		evt.preventDefault();
-		feedbackModal.classList.remove("modal-show");
-		feedbackModal.remove("modal-error");
+		modalFeedback.classList.remove("modal-show");
+		overClose.classList.remove("modal-show");
+	});
+
+window.addEventListener("keydown", function(evt) {
+		if (evt.keyCode === 27) {
+			evt.preventDefault();
+
+			if (modalFeedback.classList.contains("modal-show")) {
+				modalFeedback.classList.remove("modal-show");
+				overClose.classList.remove("modal-show");
+			}
+		}
 	});
