@@ -34,7 +34,7 @@ a {
 
 /* Блок центровщик */
 .container {
-	width: 1150px;
+	width: 1190px;
 	margin: 0 auto;
 	padding: 0 25px;
 }
@@ -108,6 +108,7 @@ a {
 }
 
 .main-header-logo {
+	margin-right: 10px;
 	padding-top: 8px;
 }
 
@@ -119,11 +120,12 @@ a {
 .site-navigation {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	
 	align-items: center;
 	width: 560px;
-	padding: 0;
 	margin: 0;
+	padding: 0;
+	padding-top: 15px;
 
 	list-style: none;
 }
@@ -155,6 +157,10 @@ a {
 	color: #333333;
 
 	background-color: #f7f6f3;
+}
+
+.site-navigation__item {
+	margin-left: 2px;
 }
 
 .site-navigation__item--dropdown {
@@ -276,6 +282,7 @@ a {
 	align-items: center;
 	width: 270px;
 	margin-left: auto;
+	padding-top: 25px;
 }
 
 .header-buttons__element {
@@ -417,6 +424,7 @@ a {
 
 .workingHours {
 	margin: 0;
+	padding-right: 41px;
 	font-size: 14px;
 	line-height: 20px;
 	text-align: right;
@@ -424,6 +432,7 @@ a {
 }
 
 .workingHours a {
+
 	font-size: 22px;
 	font-weight: 700;
 	color: #ffffff;
@@ -446,7 +455,7 @@ a {
 
 	position: relative;
     margin-bottom: 40px;
-    padding-top: 200px;
+    padding-top: 171px;
     overflow: hidden
 }
 
@@ -586,12 +595,16 @@ a {
 /* Акции */
 .index-columns {
 	display: flex;
-	justify-content: space-between;
+	
 	
 }
 
+.right-column {
+	margin-left: 28px;
+}
+
 .benefit {
-	margin-bottom: 40px;
+	margin-bottom: 71px;
 }
 
 .benefit h3 {
@@ -609,6 +622,8 @@ a {
 	flex-direction: column;
 	width: 520px;
 	padding: 20px;
+	padding-top: 16px;
+	padding-left: 19px;
 
 	border-radius: 15px;
 	/* background-color: #a50229; */
@@ -625,6 +640,8 @@ a {
 	flex-direction: column;
 	width: 520px;
 	padding: 20px;
+	padding-top: 16px;
+	padding-left: 19px;
 
 	border-radius: 15px;
 	/* background-color: #1c0a04; */
@@ -636,7 +653,19 @@ a {
 
 }
 
+.raspberries h3,
+.chokolate h3 {
+	margin-bottom: 14px;
+}
+
+.raspberries p,
+.chokolate p {
+	margin: 0;
+	margin-bottom: 45px;
+}
+
 .benefit-button {
+	margin-bottom: 3px;
 	padding: 11px 29px 12px 26px;
 	align-self: flex-end;
 }
@@ -661,7 +690,7 @@ a {
 	flex-direction: column;
 	position: relative;
 	width: 267px;
-	height: 405px;
+	height: 322px;
 	padding: 0;
 	margin: 0;
 	margin-right: 26px;
@@ -677,8 +706,8 @@ a {
 	content: "";
 
 	position: absolute;
-	top: 10px;
-	left: 10px;
+	top: 0px;
+	left: 0px;
 
 	width: 61px;
 	height: 61px;
@@ -718,14 +747,19 @@ a {
 
 .catalog-price {
 	position: absolute;
-	top: 230px;
-	right: 115px;
+	top: 209px;
+	right: 117px;
 	font-size: 30px;
 	line-height: 45px;
 }
 
 .catalog-price b {
 	font-size: 45px;
+}
+
+.catalog-content {
+	margin: 0;
+	margin-bottom: 9px;
 }
 
 .catalog-content img {
@@ -753,7 +787,10 @@ a {
 
 .features {
 	margin-bottom: 40px;
-	padding: 15px 0;
+	padding-top: 24px;
+	padding-left: 18px;
+	padding-right: 27px;
+	padding-bottom: 16px;
 
 	color: #323232;
 
@@ -764,6 +801,8 @@ a {
 }
 
 .features-text {
+	margin: 0;
+	margin-bottom: 10px;
 	font-size: 24px;
 	font-weight: 500;
 	line-height: 30px;
@@ -781,7 +820,7 @@ a {
 	box-sizing: border-box;
 	width: 48.9%;
 	margin-right: 2px;
-	padding: 12px 8px 10px 76px;
+	padding: 11px 27px 10px 56px;
 	vertical-align: top;
 }
 
@@ -793,7 +832,7 @@ a {
 	content: "";
 	position: absolute;
 	top: 0px;
-	left: 18px;
+	left: -1px;
 	width: 50px;
 	height: 50px;
 	background-image: url(../img/features/Мороженко.svg);
@@ -803,7 +842,7 @@ a {
 	content: "";
 	position: absolute;
 	top: 0px;
-	left: 18px;
+	left: -1px;
 	width: 50px;
 	height: 50px;
 	background-image: url(../img/features/Корова.svg);
@@ -813,7 +852,7 @@ a {
 	content: "";
 	position: absolute;
 	top: 0px;
-	left: 18px;
+	left: -1px;
 	width: 50px;
 	height: 50px;
 	background-image: url(../img/features/Листик.svg);
@@ -823,7 +862,7 @@ a {
 	content: "";
 	position: absolute;
 	top: 0px;
-	left: 18px;
+	left: -1px;
 	width: 50px;
 	height: 50px;
 	background-image: url(../img/features/Градусник.svg);
@@ -836,7 +875,8 @@ a {
 	width: 560px;
 	min-height: 220px;	
 	margin-bottom: 40px;
-	padding: 15px 20px;	
+	padding: 15px 20px;
+	padding-top: 23px;	
 	color: #323232;
 
 	background-color: #ffffff;
@@ -844,7 +884,7 @@ a {
 	background-position: 0 0;
 	background-repeat: no-repeat;
 
-	border-radius: 8px;
+	border-radius: 15px;
 }
 
 .news__box-link {
@@ -852,6 +892,8 @@ a {
 }
 
 .news h2 {
+	margin: 0;
+	margin-bottom: 4px;
 	font-size: 16px;
 	line-height: 22px;
 	font-weight: 500;
@@ -860,10 +902,20 @@ a {
 .news a {
 	font-size: 24px;
 	font-weight: 700;
+	line-height: 30px;
+
 }
 
 .blog-link {
 	
+}
+
+.blog-link__underline {
+	border-bottom: 2px solid #323232;
+}
+
+.blog-link__underline:hover {
+	border-color: #e84d37;
 }
 
 /* Подписка */
@@ -873,6 +925,7 @@ a {
 	width: 560px;
 	min-height: 220px;	
 	margin-bottom: 40px;
+	padding: 2px;
 
 	color: #5a5a5a;
 
@@ -888,30 +941,38 @@ a {
 
 .substrate {
 	box-sizing: border-box;
-	width: 549px;	
-	min-height: 210px;	
+	
 	margin: 6px;
-	padding: 32px 21px;	
+	padding-top: 17px;
+	padding-left: 18px;
 
 	background-color: #f6f6f4;
 	border-radius: 10px;
 }
 .subscription-email {
+	box-sizing: border-box;
+	width: 368px;
+	padding: 10px;
 	font-family: 'Roboto', Arial, sans-serif;
 	font-size: 16px;
 	line-height: 22px;
 	font-weight: 400;
 
 	color: #999999;
+	border: 1px solid #d3d3d2;
+	border-radius: 5px;
 
 }
 
 .subscription p {
-	margin: 0;	
+	margin: 0;
+	padding-right: 15px;
+	font-size: 16px;
 }
 
 .subscription-form {
-	margin-top: 40px;	
+	padding-top: 40px;
+	padding-bottom: 36px;	
 }
 
 .subscription-button {
@@ -926,6 +987,8 @@ a {
 	min-height: 430px;
 
 	background-image: url(../img/contacts/map.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
 	background-position: 50% 0;
 }
 
@@ -934,9 +997,10 @@ a {
 	top: 62px;
     right: 2.2%;
     z-index: 5;
-
-	width: 262px;
+	box-sizing: border-box;
+	width: 300px;
 	padding: 30px 20px;
+	padding-bottom: 43px;
 
 	color: #323232;
 	font-size: 14px;
@@ -946,19 +1010,32 @@ a {
 	border-radius: 15px;
 }
 
-.feedback p {
-	margin: 0;
-	margin-bottom: 13px;
-}
-
 .feedback b {
 	font-size: 18px;
 	font-weight: 700;
 	line-height: 24px;
 }
 
+.feedback__adress {
+	margin: 0;
+	margin-bottom: 25px;
+}
+
+.feedback__adress span {
+	display: inline-block;
+	padding-right: 46px;
+}
+
+.feedback__tel {
+	margin: 0;
+	margin-bottom: 39px;
+}
+
 .feedback-button {
-	padding: 10px 19px 11px 19px;
+	box-sizing: border-box;
+	width: 251px;
+	margin: 0 auto;
+	padding: 10px 27px 11px 27px;
 }
 .map {
 	text-align: center;
