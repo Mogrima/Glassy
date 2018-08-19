@@ -343,7 +343,6 @@
 			</div>
 			
 		</form>
-		<button class="modal-close visually-hidden" type="button">Закрыть</button>
 
 	</section>
 <section class="modal modal-search">
@@ -352,32 +351,34 @@
 			<label class="visually-hidden" for="user-search">Форма поиска</label>
 			<input class="main-search-input" id="user-search" type="search" name="search" placeholder="Что ищем?">
 		</form>
-		<button class="modal-close search-close visually-hidden" type="button">Закрыть</button>
+		<button class="search-close visually-hidden" type="button">Закрыть</button>
 
 	</section>
 
-	<section class="modal modal-feadback">
-		<h2 class="visually-hidden">Форма обратной связи</h2>
-		<h3>Мы обязательно вам ответим!</h3>
-		<form class="feedback-form" action="#" method="get">
-			<p>
-			<label class="visually-hidden" for="feedback-form-name">Как вас зовут?</label>
-			<input class="feedback-form-input-name" id="feedback-form-name" type="text" name="feedback-name" placeholder="Как вас зовут?" required>
-			</p>
-			<p>
-			<label class="visually-hidden" for="feedback-form-email">Ваша почта для ответа?</label>
-			<input class="feedback-form-input-email" id="feedback-form-email" type="text" name="feedback-email" placeholder="Ваша почта для ответа?" required>
-			</p>
-			
-			<label class="visually-hidden" for="feedback-form-text">Ваша почта для ответа?</label>
-			<textarea class="feedback-form-input-text" id="feedback-form-text" name="feedback-text" rows="6" cols="50" required placeholder="Напишите что-нибудь..."></textarea>
-			
-			<button class="button feedback-popup-button" type="submit">Отправить</button>
-		</form>
-			<button class="modal-close" type="button">Закрыть</button>
-	</section>
+	<div class="feedback-wrapp">
+		<section class="modal modal-feedback">
+			<h2 class="visually-hidden">Форма обратной связи</h2>
+			<h3>Мы обязательно вам ответим!</h3>
+			<form class="feedback-form" action="#" method="get">
+				<p>
+				<label class="visually-hidden" for="feedback-form-name">Как вас зовут?</label>
+				<input class="feedback-form-input-name" id="feedback-form-name" type="text" name="feedback-name" placeholder="Как вас зовут?" required>
+				</p>
+				<p>
+				<label class="visually-hidden" for="feedback-form-email">Ваша почта для ответа?</label>
+				<input class="feedback-form-input-email" id="feedback-form-email" type="text" name="feedback-email" placeholder="Ваша почта для ответа?" required>
+				</p>
+				
+				<label class="visually-hidden" for="feedback-form-text">Ваша почта для ответа?</label>
+				<textarea class="feedback-form-input-text" id="feedback-form-text" name="feedback-text" rows="6" cols="50" required placeholder="Напишите что-нибудь..."></textarea>
+				
+				<button class="button feedback-popup-button" type="submit">Отправить</button>
+			</form>
+				<button class="modal-close" type="button">Закрыть</button>
+		</section>
+	</div>
 	<div class="overlay"></div>
 
-<script type="text/javascript" src="js/modal.js"></script>	
+<script type="text/javascript" src="js/modal2.js"></script>	
 </body>
 </html>
