@@ -395,9 +395,12 @@ a {
 	padding-right: 17px;
 	padding-top: 8px;
 	padding-bottom: 8px;
-
-	background-color: #f7f6f3;
-	color: #323232;
+	
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 16px;
+	color: #ffffff;
+	background-color: rgba(255,255,255,.2);
 	border-radius: 15px;
 }
 
@@ -408,7 +411,7 @@ a {
 	top: 7px;
 	width: 21px;
 	height: 20px;
-	background-image: url(../img/basket-red.svg);
+	background-image: url(../img/basket.svg);
 }
 
 .basket-button {
