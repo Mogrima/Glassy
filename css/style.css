@@ -1050,6 +1050,7 @@ a {
 
 .main-footer .container {
 	display: flex;
+	justify-content: space-around;
 }
 
 .footer-social {
@@ -1067,6 +1068,10 @@ a {
 	margin: 0;
 	padding: 0;
 	list-style: none;
+}
+
+.footer-social-list path:hover {
+	fill: #ffbc9e;
 }
 
 .footer-social li {
@@ -1137,6 +1142,10 @@ a {
 
 /* Стилизация страницы каталога */
 
+.inner-page .container {
+	width: 1161px;
+}
+
 .inner-page .main-header {
 	margin-bottom: 0;
 }
@@ -1147,6 +1156,10 @@ a {
 
 .inner-page .header-buttons {
 	padding-top: 3px;
+}
+
+.inner-page .catalog {
+	margin-bottom: 31px;	
 }
 
 .inner-page .catalog-list {
@@ -1161,7 +1174,17 @@ a {
 	display: none;
 }
 
+.inner-page .main-footer {
+	padding-top: 18px;
+}
 
+.inner-page .footer-social {
+	padding-top: 22px;
+}
+
+.inner-page .footer-link {
+	padding-top: 13px;
+}
 
 .page-title {
 	margin: 0;
