@@ -1475,6 +1475,58 @@ margin-left: 1px; */
 
 }
 
+.filter__label-checkbox {
+	position: relative;
+
+	padding-left: 30px;
+
+	cursor: pointer;
+}
+
+.filter__label-checkbox input[type="checkbox"] + .checkbox-indicator {
+	position: absolute;
+	top: 0;
+	left: 0;
+	
+	box-sizing: border-box;
+	width: 21px;
+	height: 21px;
+
+	border: 2px solid rgba(255, 255, 255, 0.8);
+	border-radius: 4px;
+}
+
+.filter__label-checkbox input[type="checkbox"]:focus + .checkbox-indicator {
+	border-color: #ffbc9e;
+}
+
+.filter__label-checkbox input[type="checkbox"]:checked + .checkbox-indicator::before,
+.filter__label-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after {
+	content: "";
+
+	position: absolute;
+
+	width: 4px;
+
+	background-color: rgba(255, 255, 255, 0.8);
+}
+
+.filter__label-checkbox input[type="checkbox"]:checked + .checkbox-indicator::before {
+	top: 4px;
+	left: 4px;
+	height: 12px;
+
+	transform: rotate(-56deg);
+}
+
+.filter__label-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after {
+	top: 0px;
+	left: 12px;
+	height: 15px;
+
+	transform: rotate(40deg);
+}
+
 /* Кнопка фильтра */
 
 .filter-button {
