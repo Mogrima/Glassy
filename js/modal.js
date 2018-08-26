@@ -104,3 +104,4 @@ var basketLink = document.querySelector(".basket-button");
  basketLink.addEventListener("click", function(evt) {
 		evt.preventDefault();
 	});
+
