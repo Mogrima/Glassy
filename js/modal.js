@@ -5,7 +5,7 @@ var login = modalLogin.querySelector("[name=email]");
 var password = modalLogin.querySelector("[name=password]");
 var storage = localStorage.getItem("login");
 
-loginLink.addEventListener("mouseover", function(evt) {
+loginLink.addEventListener("click", function(evt) {
 		evt.preventDefault();
 		modalLogin.classList.add("modal-show");
 		overClose.classList.add("modal-show");
@@ -97,4 +97,10 @@ darkOverlay.addEventListener("click", function(evt) {
 		modalFeedback.classList.remove("modal-show");
 		modalLogin.classList.remove("modal-error");
 		darkOverlay.classList.remove("modal-show");
+	});
+
+var basketLink = document.querySelector(".basket-button");
+
+ basketLink.addEventListener("click", function(evt) {
+		evt.preventDefault();
 	});
