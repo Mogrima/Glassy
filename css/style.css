@@ -612,6 +612,7 @@ a {
 	margin-bottom: 3px;
 	padding: 11px 29px 12px 26px;
 	align-self: flex-end;
+	font-weight: 700;
 }
 
 /* Каталог мороженного */
@@ -772,6 +773,10 @@ a {
 	margin-right: 0;
 }
 
+.features-item::before {
+	background-repeat: no-repeat;
+}
+
 .features-item:nth-child(1)::before {
 	content: "";
 	position: absolute;
@@ -908,6 +913,11 @@ a {
 
 }
 
+.subscription-email:hover {
+	box-shadow: inset 0 0 0 1px #c7c6c5;
+	border: 1px solid #c7c6c5;
+}
+
 .subscription p {
 	margin: 0;
 	padding-right: 15px;
@@ -922,6 +932,7 @@ a {
 .subscription-button {
 	margin-left: 10px;	
 	padding: 10px 19px;
+	font-weight: 700;
 }
 
 /* Карта и адрес */
@@ -980,6 +991,7 @@ a {
 	width: 251px;
 	margin: 0 auto;
 	padding: 10px 27px 11px 27px;
+	font-weight: 700;
 }
 .map {
 	text-align: center;
@@ -1626,7 +1638,7 @@ margin-left: 1px; */
 .modal input[type="text"],
 .modal input[type="search"],
 .modal textarea {
-	border: 1px solid #f3f3f1;
+	border: 1px solid #d3d3d2;
 	border-radius: 4px;
 }
 /* Личный кабинет */
@@ -1660,16 +1672,17 @@ margin-left: 1px; */
 	border: 1px solid rgba(178, 178, 178, .52);
 	border-radius: 5px;
 }
+
+.main-search-input:hover,
 .login-icon-user:hover,
 .login-icon-password:hover {
-	padding: 9px 13px;
-    border: 2px solid rgba(154, 154, 154, .52);
+    box-shadow: inset 0 0 0 1px #c7c6c5;
+	border: 1px solid #c7c6c5;
 }
 
 .login-icon-user:focus,
 .login-icon-password:focus {
 	padding: 9px 13px;
-    border: 2px solid rgba(154, 154, 154, .52);
     font-weight: 700;
 }
 
@@ -1778,6 +1791,12 @@ margin-left: 1px; */
 	color: #999999;
 	line-height: 24px;
 
+}
+
+.feedback-form input:hover,
+.feedback-form textarea:hover {
+    box-shadow: inset 0 0 0 1px #c7c6c5;
+	border: 1px solid #c7c6c5;
 }
 
 .feedback-form-input-text {
