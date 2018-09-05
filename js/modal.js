@@ -1,4 +1,4 @@
-var loginLink = document.querySelector(".login-link");
+var loginLink = document.querySelector(".header-buttons__btn--login");
 var modalLogin = document.querySelector(".modal-login");
 var overClose = document.querySelector(".overlay");
 var login = modalLogin.querySelector("[name=email]");
@@ -38,7 +38,7 @@ window.addEventListener("keydown", function(evt) {
 		}
 	});
 
-var searchLink = document.querySelector(".search-button");
+var searchLink = document.querySelector(".header-buttons__btn--search");
 var modalSearch = document.querySelector(".modal-search");
 var searchInput = document.querySelector(".main-search-input");
 
@@ -99,9 +99,12 @@ darkOverlay.addEventListener("click", function(evt) {
 		darkOverlay.classList.remove("modal-show");
 	});
 
-var basketLink = document.querySelector(".basket-button");
+var basketLink = document.querySelector(".header-buttons__btn--basket");
+var basketPopup = document.querySelector(".modal-goods");
 
  basketLink.addEventListener("click", function(evt) {
 		evt.preventDefault();
-	});
+		/*basketPopup.classList.add("modal-show");
+		overClose.classList.add("modal-show");*/
+});
 

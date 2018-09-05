@@ -1,6 +1,6 @@
-var basketLink = document.querySelector(".basket-button");
-	var overClose = document.querySelector(".overlay");
-    var modalTableBasket = document.querySelector(".modal-goods");
+var basketLink = document.querySelector(".header-buttons__btn--basket");
+var overClose = document.querySelector(".overlay");
+var modalTableBasket = document.querySelector(".modal-goods");
 
  basketLink.addEventListener("click", function(evt) {
 		evt.preventDefault();
@@ -18,8 +18,8 @@ var basketLink = document.querySelector(".basket-button");
 		if (evt.keyCode === 27) {
 			evt.preventDefault();
 
-			if (basketLink.classList.contains("modal-show")) {
-				basketLink.classList.remove("modal-show");
+			if (modalTableBasket.classList.contains("modal-show")) {
+				modalTableBasket.classList.remove("modal-show");
 				overClose.classList.remove("modal-show");
 			}
 		}

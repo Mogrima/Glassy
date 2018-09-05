@@ -33,7 +33,7 @@ a {
 
 /* Блок центровщик */
 .container {
-	width: 1190px;
+	width: 1161px;
 	margin: 0 auto;
 	padding: 0 25px;
 }
@@ -1231,10 +1231,6 @@ a {
 
 /* Стилизация страницы каталога */
 
-.inner-page .container {
-	width: 1161px;
-}
-
 .inner-page .main-header {
 	margin-bottom: 0;
 }
@@ -1981,8 +1977,9 @@ margin-left: 1px; */
 .modal-goods {
 	display: none;
 	position: absolute;
+	z-index: 10;
 	top: 60px;
-	right: 77px;
+	right: 47px;
 
 	box-sizing: border-box;
 	min-width: 541px;
