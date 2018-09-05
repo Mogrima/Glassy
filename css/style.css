@@ -274,152 +274,6 @@ a {
     border-radius: 0 0 5px 5px
 }
 
-
-/* .header-buttons {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	align-items: center;
-	width: 270px;
-	margin-left: auto;
-	padding-top: 25px;
-}
-
-.header-buttons__element {
-	min-width: 32px;
-	height: 35px;
-	margin-right: 7px;
-}
-
-.header-buttons__element:last-child {
-	margin-right: 0;
-}
-
-.user-navigation {
-	margin: 0;
-	padding: 0;
-	
-	list-style: none;
-	
-}
-
-
-.user-navigation a {
-	position: relative;
-	padding-left: 44px;
-	padding-right: 17px;
-	padding-top: 8px;
-	padding-bottom: 8px;
-	color: #ffffff;
-	font-size: 14px;
-	font-weight: 500;
-	line-height: 16px;
-
-	background-color: rgba(255, 255, 255, .3);
-	border-radius: 15px;
-} */
-
-/* .user-navigation a::before {
-	content: "";
-	position: absolute;
-	right: 55px;
-	top: 7px;
-	width: 21px;
-	height: 19px;
-	background-image: url(../img/Enter.svg);
-} */
-
-/* .user-navigation a:hover {
-  	color: #323232;
-
-  	background-color: #f8f7f4;
-}
-
-.search-button {
-	position: relative;
-	display: block;
-	width: 32px;
-    height: 32px;
-    margin-bottom: 10px;
-    
-    color: #ffffff;
-    font-size: 14px;
-    line-height: 32px;
-    font-weight: 500;
-
-	text-decoration: none;
-    background-color: rgba(255,255,255,.2);
-	border-radius: 50%;
-}
-
-.search-button::before {
-	content: "";
-	position: absolute;
-	top: -16px;
-	left: 0;
-
-	width: 33px;
-	height: 33px;
-	background-image: url(../img/Лупа.png);
-}
-
-.search {
-	margin-right: 47px;
-}
-
-.search-button:hover {
-  	color: #323232;
-
-  	background-color: #f8f7f4;
-}
-
-.header-buttons--icon {
-	position: absolute;
-	left: 25%;
-	top: 25%;
-}
-
-
-
-.basket {
-	
-}
-
-.basket a {
-	position: relative;
-	padding-left: 44px;
-	padding-right: 17px;
-	padding-top: 8px;
-	padding-bottom: 8px;
-	
-	font-size: 14px;
-	font-weight: 500;
-	line-height: 16px;
-	color: #ffffff;
-	background-color: rgba(255,255,255,.2);
-	border-radius: 15px;
-}
-
-.basket a::before {
-	content: "";
-	position: absolute;
-	right: 80px;
-	top: 7px;
-	width: 21px;
-	height: 20px;
-	background-image: url(../img/basket.svg);
-}
-.basket-button {
-	font-size: 	14px;
-	color: #ffffff;
-}
-
-.basket-button:active {
-	color: #323232;
-
-  	background-color: #f8f7f4;
-} */
-
 .header-buttons {
     max-width: 270px;
     padding-top: 39px;
@@ -515,7 +369,6 @@ a {
 
 .workingHours {
 	margin: 0;
-	padding-right: 41px;
 	font-size: 14px;
 	line-height: 20px;
 	text-align: right;
@@ -1206,8 +1059,8 @@ a {
 	content: "";
 
 	position: absolute;
-	left: -29px;
-	top: 5px;
+	left: -20px;
+	top: 4px;
 
 	width: 15px;
 	height: 13px;
@@ -1280,6 +1133,7 @@ a {
 }
 
 .main {
+	margin-top: -22px;
 	border-bottom: 1px solid rgba(225, 255, 255, 0.2);
 }
 
@@ -1693,17 +1547,17 @@ margin-left: 1px; */
 .pagination-list::after {
 	content: "";
 	position: absolute;
-	width: 6px;
-	height: 6px;
-	border-top: 1px solid rgba(255, 255, 255, 1);
-	border-right: 1px solid rgba(255, 255, 255, 1);
+	width: 9px;
+	height: 9px;
+	border-top: 2px solid rgba(255, 255, 255, 1);
+	border-right: 2px solid rgba(255, 255, 255, 1);
 }
 
 .pagination-list::before {
 	left: 0px;
 	top: 8px;
-	border-top: 1px solid rgba(255, 255, 255, .2);
-	border-right: 1px solid rgba(255, 255, 255, .3);
+	border-top: 2px solid rgba(255, 255, 255, .2);
+	border-right: 2px solid rgba(255, 255, 255, .3);
 	transform: rotate(-135deg);
 }
 
@@ -1714,6 +1568,8 @@ margin-left: 1px; */
 }
 
 .pagination-item {
+	width: 26px;
+	height: 26px;
 	margin-right: 4px;	
 }
 
